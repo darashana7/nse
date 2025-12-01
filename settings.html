@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>App Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark font-display group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 z-10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm">
+    <a href="watchlist.html" class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center">
+        <span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+    </a>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Settings</h2>
+<div class="flex size-12 shrink-0 items-center"></div>
+</div>
+<div class="flex flex-col gap-8 px-4 py-2">
+<!-- User Profile Header -->
+<div class="flex items-center gap-4 py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16" data-alt="User's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEYmxT8LlWl0DYxQK2HOhXuQZdPbPj6XKKSUK7bwLfb3_wIo5aO2pS4mF2ezG5i-NwUAZYpIIp5WGSpLVySL-Jy-hUx2K40qiQLT4qhxM5WzqiGp8P0J1UqzZaoKav0WmlcUqFGvGO7WQ3hTiHm_AMW5Hg_F8Vj1aj5meSD0phFzVBWRZ6RdG2cQYSR5WqK9tPXa94ywveXjOL_8pOoRNSJZvf-XagwGhhBYDBC0y1rlSCzvlWCb4y_lkVVJfnIrGivRzj9XwUSFY");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1">Caitlyn King</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">caitlyn.king@email.com</p>
+</div>
+</div>
+</div>
+<!-- Account Section -->
+<div class="flex flex-col">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Account</h3>
+<div class="flex flex-col divide-y divide-slate-200 dark:divide-slate-800 bg-slate-50 dark:bg-slate-900/50 rounded-xl overflow-hidden">
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">person</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Personal Information</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-400 dark:text-slate-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">shield</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Security</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-400 dark:text-slate-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">credit_card</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Subscription</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-400 dark:text-slate-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notifications Section -->
+<div class="flex flex-col">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Notifications</h3>
+<div class="flex flex-col divide-y divide-slate-200 dark:divide-slate-800 bg-slate-50 dark:bg-slate-900/50 rounded-xl overflow-hidden">
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Push Notifications</p>
+</div>
+<div class="shrink-0">
+<label class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-slate-200 dark:bg-slate-700 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-slate-300 dark:after:border-slate-600 after:bg-white after:transition-all peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+</label>
+</div>
+</div>
+<a href="alerts.html" class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">trending_up</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Price Alerts</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-400 dark:text-slate-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</a>
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">email</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Email Notifications</p>
+</div>
+<div class="shrink-0">
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-slate-200 dark:bg-slate-700 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-slate-300 dark:after:border-slate-600 after:bg-white after:transition-all peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Appearance Section -->
+<div class="flex flex-col">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Appearance</h3>
+<div class="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-2">
+    <div class="grid grid-cols-3 gap-1 rounded-lg bg-slate-200 dark:bg-slate-800 p-1">
+        <button id="light-theme-button" class="rounded-md px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-400">Light</button>
+        <button id="dark-theme-button" class="rounded-md px-3 py-2 text-sm font-medium bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Dark</button>
+        <button id="system-theme-button" class="rounded-md px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-400">System</button>
+    </div>
+</div>
+</div>
+<!-- About Section -->
+<div class="flex flex-col">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">About</h3>
+<div class="flex flex-col divide-y divide-slate-200 dark:divide-slate-800 bg-slate-50 dark:bg-slate-900/50 rounded-xl overflow-hidden">
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">help</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Help &amp; Support</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-400 dark:text-slate-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">policy</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Privacy Policy</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-400 dark:text-slate-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">gavel</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Terms of Service</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-400 dark:text-slate-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<p class="text-center text-xs text-slate-500 dark:text-slate-400 mt-4">App Version 1.0.2</p>
+</div>
+<!-- Actions Section -->
+<div class="flex flex-col pt-4 pb-12">
+<div class="bg-slate-50 dark:bg-slate-900/50 rounded-xl overflow-hidden">
+<button class="w-full text-center text-red-500 dark:text-red-500 text-base font-medium p-4">Log Out</button>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body></html>

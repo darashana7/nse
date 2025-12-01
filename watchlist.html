@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Watchlist Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative min-h-screen w-full">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200/10 dark:border-gray-800">
+<div class="text-gray-800 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</div>
+<h1 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Watchlists</h1>
+<div class="flex w-12 items-center justify-end">
+    <a href="settings.html" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-gray-800 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+        <span class="material-symbols-outlined text-3xl">account_circle</span>
+    </a>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3 bg-background-light dark:bg-background-dark">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-gray-400 dark:text-[#92adc9] flex border-gray-200 dark:border-gray-700 bg-white dark:bg-[#233648] items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-gray-900 dark:text-white focus:outline-0 focus:ring-0 border-gray-200 dark:border-gray-700 bg-white dark:bg-[#233648] focus:border-primary h-full placeholder:text-gray-400 dark:placeholder:text-[#92adc9] px-4 pl-2 text-base font-normal leading-normal" placeholder="Search for a stock" value=""/>
+</div>
+</label>
+</div>
+<main class="flex flex-col gap-6 p-4 pb-28">
+<!-- Watchlist Card: Tech Giants -->
+<div class="bg-white dark:bg-[#192734] rounded-xl shadow-md shadow-black/5 overflow-hidden">
+<div class="flex items-center justify-between px-4 pt-4 pb-3">
+<h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Tech Giants</h2>
+<button class="text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex flex-col">
+<!-- Stock Item: AAPL -->
+    <a href="stock-detail.html" class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-t border-gray-200/50 dark:border-gray-700/50">
+<div class="flex items-center gap-4">
+<img class="rounded-full size-10" data-alt="Apple Inc. logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIOUs6-YTzky23asuY_CjObMjJ7bSbymJl0frMANODgutRwNC5-2xNjMF9eJOnn4LoP7--nQD7m7xN3OOtGbcl3XWjsLu8rOcJNfoIorpLsY0UTEQKG8fWj95hEj2_belrp_bhIlxgmht6iPkmPJ3HupcJyq5D7hF0nUXuq5tPgi72fcOgoS_QqXFYUTEmyJIIyHZqjRLrcrUcPh93wBOoEHOngOMKgxvu1_pX2Gq1yfo10DZvG-uQ9-qdkomahuEABU50z3-7idQ"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal line-clamp-1">AAPL</p>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm font-normal leading-normal line-clamp-2">Apple Inc.</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">$171.48</p>
+<div class="flex items-center justify-center rounded-md bg-green-500/10 dark:bg-green-500/20 px-2 py-0.5">
+<p class="text-green-600 dark:text-green-400 text-sm font-medium leading-normal">+1.25%</p>
+</div>
+</div>
+</a>
+<!-- Stock Item: GOOGL -->
+    <a href="stock-detail.html" class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-t border-gray-200/50 dark:border-gray-700/50">
+<div class="flex items-center gap-4">
+<img class="rounded-full size-10" data-alt="Alphabet Inc. logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrQ-dFD-vA_K0MqMUeq1UtTYBp6O60XXUB-EBNG-Oz36aRSgU_6pqnt5iAfCdv6HA1KmRlqvZZ7Hya6Z6YBI-1DtureT29y4cVdwrQAj0mnzMy1QBDQqzwCD2SZ_l3vLGySC5GFSMB6liL6nW9q7rG657LiS2ETxnlucj7cPOgksKcmPOWk4j_ZymhTB5XkAIj5LvMIRdC_dPx-iX0z07BFxAe45600BovlCDo_dai1nsUPL3uBoHdiQLi66KXQPbG8yD1wRbYR5g"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal line-clamp-1">GOOGL</p>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm font-normal leading-normal line-clamp-2">Alphabet Inc.</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">$138.99</p>
+<div class="flex items-center justify-center rounded-md bg-red-500/10 dark:bg-red-500/20 px-2 py-0.5">
+<p class="text-red-600 dark:text-red-400 text-sm font-medium leading-normal">-0.82%</p>
+</div>
+</div>
+</a>
+<!-- Stock Item: MSFT -->
+    <a href="stock-detail.html" class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-t border-gray-200/50 dark:border-gray-700/50">
+<div class="flex items-center gap-4">
+<img class="rounded-full size-10" data-alt="Microsoft Corporation logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAULUidprOf1_J5q_--m9gPOsNbLOmcuTYH_RC4ysOm9j-h1ut666z8KmA2U1Yo2LuCeaJJf10yx9m3QDqtgE9cqIfWAC3ZHo7zujLR-dtN3hr-XjjT-uTNav8Z-fV4G2a-ZazKO_Qlbrb5gwdxUhEQc-Z9vr9vkvwjytP4EjPX381YP_Jb0ftw8at880zEHa-OuRsndZ8n4HF894PJgv9kCCsI3ijaMmJ7wRwriTbCCXPpS_VBzcSwLXXfxA0g-vOdplR2wYqKONg"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal line-clamp-1">MSFT</p>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm font-normal leading-normal line-clamp-2">Microsoft Corp.</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">$420.72</p>
+<div class="flex items-center justify-center rounded-md bg-green-500/10 dark:bg-green-500/20 px-2 py-0.5">
+<p class="text-green-600 dark:text-green-400 text-sm font-medium leading-normal">+2.45%</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Watchlist Card: EV Stocks -->
+<div class="bg-white dark:bg-[#192734] rounded-xl shadow-md shadow-black/5 overflow-hidden">
+<div class="flex items-center justify-between px-4 pt-4 pb-3">
+<h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">EV Stocks</h2>
+<button class="text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex flex-col">
+<!-- Stock Item: TSLA -->
+    <a href="stock-detail.html" class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-t border-gray-200/50 dark:border-gray-700/50">
+<div class="flex items-center gap-4">
+<img class="rounded-full size-10" data-alt="Tesla Inc. logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSFnpdBbRfTX7nnTvWuja8U1kT2fSqlva65WYWPGilDjSEj_VEA9SvJYf91llNhs2mjJa77oqI5o_jCITKEQ6BcmqpQHayW6VWw0c-Dlf8xRGCFaEKmyylTc0HZybGUoNEymtJWHSBiXfVr0jyl6f7rI63ZeFDAGQA-KZWz_F_6CQBQf_86YcZlwXul430Cky-mBIrsaducBbwB1MAZt1Tmr4tOkf5PRDb7WFhXSTNIt-hVGzBwVxoNJ9pfTCSBjVT-CBoL5BYxC4"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal line-clamp-1">TSLA</p>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm font-normal leading-normal line-clamp-2">Tesla, Inc.</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">$177.48</p>
+<div class="flex items-center justify-center rounded-md bg-red-500/10 dark:bg-red-500/20 px-2 py-0.5">
+<p class="text-red-600 dark:text-red-400 text-sm font-medium leading-normal">-3.54%</p>
+</div>
+</div>
+</a>
+<!-- Stock Item: RIVN -->
+    <a href="stock-detail.html" class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-t border-gray-200/50 dark:border-gray-700/50">
+<div class="flex items-center gap-4">
+<img class="rounded-full size-10" data-alt="Rivian Automotive, Inc. logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD5RLdBoQCANf26s_lacYE8OeiGPqg3r5sXj8thg5-wFg0WAsTWTx3bsPES6abRE7b1zJJhOAs6Jo7YcqbAMhUkiNdy__ZO24Vz_OMJi342x9d6mwr1Jb86kRugENzAcY_M6nn5s950GJm5TqxSQET2MrAyEKZPhoQ6S7hZZIk5-LMGcHkBCoh7OXhpP6SZIpfSiWlsW0H4yeuyF2rXeimmc1r4SKd4VkZr5Dv1J4l8ITj8vgBbowbi5Z_NOerOR3Zq2ULfY8fv98"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal line-clamp-1">RIVN</p>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm font-normal leading-normal line-clamp-2">Rivian Automotive</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">$10.29</p>
+<div class="flex items-center justify-center rounded-md bg-gray-500/10 dark:bg-gray-500/20 px-2 py-0.5">
+<p class="text-gray-600 dark:text-gray-400 text-sm font-medium leading-normal">0.00%</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+</main>
+<!-- Floating Action Button (FAB) -->
+<div class="fixed bottom-6 right-6">
+    <a href="add-stock.html" class="flex items-center justify-center size-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</a>
+</div>
+</div>
+<script src="script.js"></script>
+</body></html>

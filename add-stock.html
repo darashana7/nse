@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Stock to Watchlist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Main Screen Content -->
+<div class="flex flex-col h-full">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+    <a href="watchlist.html" class="text-white dark:text-gray-200 flex size-12 shrink-0 items-center justify-start">
+        <span class="material-symbols-outlined text-2xl">close</span>
+    </a>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Add Stock</h2>
+<div class="flex w-12 items-center justify-end">
+    <a href="watchlist.html" class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0">Cancel</a>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex border-none bg-gray-200 dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-200 dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search for a symbol or company" value=""/>
+</div>
+</label>
+</div>
+<!-- Empty State (initially visible) -->
+<div class="flex flex-col px-4 py-6 mt-16">
+<div class="flex flex-col items-center gap-6">
+<div class="flex items-center justify-center size-24 bg-primary/20 rounded-full">
+<span class="material-symbols-outlined text-primary text-5xl">search</span>
+</div>
+<div class="flex max-w-[480px] flex-col items-center gap-2">
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] max-w-[480px] text-center">Search for Stocks</p>
+<p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal max-w-[480px] text-center">Find stocks by symbol or company name to add them to your watchlist.</p>
+</div>
+</div>
+</div>
+<!-- Spacer -->
+<div class="flex-grow"></div>
+</div>
+<!-- Bottom Sheet (hidden by default, shown on interaction) -->
+<div class="flex absolute top-0 left-0 h-full w-full flex-col justify-end items-stretch bg-black/40">
+<div class="flex flex-col items-stretch bg-background-light dark:bg-background-dark rounded-t-xl max-h-[90vh]">
+<!-- Handle -->
+<button class="flex h-5 w-full items-center justify-center pt-3">
+<div class="h-1 w-9 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+</button>
+<!-- Title -->
+<h1 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">Add AAPL to...</h1>
+<!-- Watchlist Items -->
+<div class="flex flex-col overflow-y-auto px-4">
+<!-- List Item with Check -->
+<div class="flex items-center justify-between py-4 border-b border-gray-200 dark:border-gray-700">
+<p class="text-slate-800 dark:text-gray-200 text-base font-medium">Tech Stocks</p>
+<span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+</div>
+<!-- List Item -->
+<div class="flex items-center justify-between py-4 border-b border-gray-200 dark:border-gray-700">
+<p class="text-slate-800 dark:text-gray-200 text-base font-medium">Long-Term Holds</p>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-2xl">radio_button_unchecked</span>
+</div>
+<!-- List Item -->
+<div class="flex items-center justify-between py-4 border-b border-gray-200 dark:border-gray-700">
+<p class="text-slate-800 dark:text-gray-200 text-base font-medium">Speculative Plays</p>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-2xl">radio_button_unchecked</span>
+</div>
+<!-- Create New Watchlist Button -->
+    <a href="create-watchlist.html" class="flex items-center py-4">
+<span class="material-symbols-outlined text-primary text-2xl mr-3">add</span>
+<p class="text-primary text-base font-medium">Create New Watchlist</p>
+</a>
+</div>
+<!-- Action Buttons -->
+<div class="p-4 flex flex-col gap-3 sticky bottom-0 bg-background-light dark:bg-background-dark pb-8">
+    <a href="watchlist.html" class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold">
+<span class="truncate">Add to Watchlist</span>
+</a>
+    <a href="watchlist.html" class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-gray-200 dark:bg-gray-800 text-slate-900 dark:text-white text-base font-bold">
+<span class="truncate">Cancel</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body></html>
