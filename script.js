@@ -91,7 +91,7 @@ function renderWatchlist(stocks) {
     container.innerHTML = '';
     stocks.forEach(stock => {
         const stockElement = document.createElement('a');
-        stockElement.href = 'stock-detail.html';
+        stockElement.href = `stock-detail.html?symbol=${stock.symbol}`;
         stockElement.className = 'flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-t border-gray-200/50 dark:border-gray-700/50';
 
         const changeClass = stock.change.startsWith('+') ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400';
@@ -118,10 +118,34 @@ function renderWatchlist(stocks) {
     lastUpdated.textContent = new Date().toLocaleTimeString();
 }
 
+// Populate stock detail page
+async function populateStockDetail() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const symbol = urlParams.get('symbol');
+    if (!symbol) return;
+
+    const stocks = await fetchStockData();
+    const stock = stocks.find(s => s.symbol === symbol);
+
+    if (stock) {
+        document.getElementById('stock-symbol').textContent = stock.symbol;
+        document.getElementById('stock-name').textContent = stock.name;
+        document.getElementById('stock-price').textContent = `$${stock.price.toFixed(2)}`;
+        document.getElementById('stock-change').textContent = stock.change;
+
+        const changeClass = stock.change.startsWith('+') ? 'text-positive' : 'text-negative';
+        document.getElementById('stock-change').className = `pt-1 text-base font-medium leading-normal ${changeClass}`;
+    }
+}
+
 // Apply the theme when the DOM is loaded
 document.addEventListener('DOMContentLoaded', async () => {
     applyTheme();
     setBackButtonHref();
+
+    if (window.location.pathname.endsWith('stock-detail.html')) {
+        populateStockDetail();
+    }
 
     const lightThemeButton = document.getElementById('light-theme-button');
     const darkThemeButton = document.getElementById('dark-theme-button');

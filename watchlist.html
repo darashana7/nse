@@ -45,9 +45,9 @@
 </div>
 <h1 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Watchlists</h1>
 <div class="flex w-12 items-center justify-end">
-    <button id="refresh-button" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-gray-800 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
-        <span class="material-symbols-outlined text-3xl">refresh</span>
-    </button>
+    <a href="settings.html" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-gray-800 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+        <span class="material-symbols-outlined text-3xl">account_circle</span>
+    </a>
 </div>
 </div>
 <!-- Search Bar -->
@@ -70,8 +70,11 @@
     <div id="watchlist-container">
         <!-- Stock data will be dynamically injected here -->
     </div>
-    <div class="text-center text-sm text-gray-500 dark:text-gray-400">
-        Last updated: <span id="last-updated"></span>
+    <div class="flex items-center justify-center text-sm text-gray-500 dark:text-gray-400">
+        <span>Last updated: </span><span id="last-updated" class="mr-2"></span>
+        <button id="refresh-button">
+            <span class="material-symbols-outlined text-xl">refresh</span>
+        </button>
     </div>
 </main>
 <!-- Floating Action Button (FAB) -->
